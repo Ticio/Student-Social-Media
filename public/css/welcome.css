@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Markazi+Text|Roboto');
+
+/*Official color: #f5faff*/
+/*ff6400*/
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+	margin-bottom: 0 !important;
+	/*padding: 5px !important;*/
+	border-radius: 0 !important;
+	background: transparent !important;
+	z-index: 1000;
+	border: none !important;
+	height: 67px;
+	box-sizing: border-box;
+}
+
+nav ul li a{
+	color: #fff !important;
+}
+
+nav ul li{
+	/*font-family: 'East Sea Dokdo', cursive;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 1em;
+    text-transform: uppercase;
+    /*font-family: 'Markazi Text', serif;*/
+    font-weight: 500;
+    /*background: red !important;*/
+    padding: 5px 2px;
+    margin: 0 5px;
+    margin: 3px 4px;
+}
+
+nav .navbar-brand{
+}
+
+nav .navbar-brand img{
+	width: 60px !important;
+	margin-top: -11px !important;
+}
+
+#myCarousel{
+	text-align: center !important;
+}
+
+.carousel-inner{
+	margin-top: -70px;
+	height: 101vh;
+}
+
+.carousel-inner .item{
+	height: 100%;
+}
+
+#welcome-message{
+	text-align: center;
+    position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 38%;
+	width: 62%;;
+	min-width: 500px;
+	color: #fff;
+}
+
+#welcome-message h2{
+	font-size: 40px;
+    text-align: center;
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 2%;
+}
+
+#search-bar
+{
+	background: #fff;
+	width: 80%;
+	/*padding: 10px;*/
+	background: #fff;
+    padding: 6px 15px;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,.9);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-bar .search {
+	width: 80%;
+}
+
+#search-bar .search-btn{
+	width: 10%;
+}
+
+#search-bar input{
+	width: 100%;
+}
+
+.carousel-inner .item div{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+}
+
+.carousel-inner .item .div1{
+	background-image: -webkit-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(../images/slider.png);
+}
+
+.carousel-inner .item .div2{
+	background-image: -webkit-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(../images/image1.jpg);
+}
+
+.carousel-inner .item .div3{
+	background-image: -webkit-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(../images/image2.jpg);
+}
+
+.thumbnail{
+
+}
+
+.thumbnail .back-image0{
+	background-image: -webkit-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(https://ssl.gstatic.com/accounts/ui/avatar_2x.png);
+  	background-image: -o-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(https://ssl.gstatic.com/accounts/ui/avatar_2x.png);
+  	background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(https://ssl.gstatic.com/accounts/ui/avatar_2x.png);
+
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+    height: 200px;
+    /*position: relative;*/
+    /*text-align: center;*/
+    box-sizing: border-box;
+}
+
+.thumbnail a
+{
+	width: 100%;
+	border-radius: 0 0px 3px 3px !important;
+}
+
+/*CSS for the subtitles*/
+.subtitle {
+	text-align: center;
+	font-size: 1.4em;
+	padding: 13px !important;
+	/*font-family: Montserrat;*/
+	background: #E35D06;
+	color: #fff;
+}
+
+.panel, .subtitle{
+	border-radius: 10px !important;
+}
+/*CSS para o footer*/
+footer{background-color: #eee; padding: 25px;}
+       ul, li{list-style-type: none;}
+       .list{margin-top: 15px;}
