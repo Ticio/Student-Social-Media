@@ -35,108 +35,122 @@
     @yield('header')
 </head>
 <body>
-<div id="app">
-    <nav class="navbar navbar-default navbar-static-top navbar-around">
-        <div class="container">
-            <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+   <div id="fb-root"></div>
 
-                <!-- Branding Image -->
-                @if(Auth::check())
-                    <a class="navbar-brand" href="{{ route('home') }}">
-                        <img src="{{ asset('images/logo.png') }}" alt="" />
-                    </a>
-                @else
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{ asset('images/logo.png') }}" alt="" />
-                    </a>
-                @endif
-            </div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=448766425622023&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;
-                </ul>
+    <div id="app">
+            <nav class="navbar navbar-default navbar-static-top navbar-around">
+                <div class="container">
+                    <div class="navbar-header">
 
-               {{--  <div class="navbar-form navbar-left">
-                    <form id="custom-search-input" method="get" action="{{ url('/search') }}">
-                        <div class="input-group col-md-12">
-                            <input type="text" class="form-control input-lg" name="s" placeholder="search..." />
-                            <span class="input-group-btn">
-                                <button class="btn btn-info btn-lg" type="button">
-                                    <i class="glyphicon glyphicon-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </form>
-                </div> --}}
+                        <!-- Collapsed Hamburger -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
 
+                        <!-- Branding Image -->
+                        @if(Auth::check())
+                            <a class="navbar-brand" href="{{ route('home') }}">
+                                <img src="{{ asset('images/logo.png') }}" alt="" />
+                            </a>
+                        @else
+                            <a class="navbar-brand" href="{{ url('/') }}">
+                                <img src="{{ asset('images/logo.png') }}" alt="" />
+                            </a>
+                        @endif
+                    </div>
 
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    {{-- @include('widgets.notifications') --}}
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle parent" data-toggle="dropdown" role="button" aria-expanded="false">
-
-                            @if(Auth::check())
-                                <img src="{{ Auth::user()->getPhoto() }}" alt="" />
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            @else
-
-                            @endif
-
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-        
-                             @if(Auth::check())
-                                <li>
-                                    <a href="{{ url('/'.Auth::user()->username) }}">
-                                        <i class="fa fa-user"></i> My Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('/settings') }}">
-                                        <i class="fa fa-cog"></i> Settings
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                        <i class="fa fa-sign-out"></i> Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            @else
-                                
-                            @endif
+                    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="nav navbar-nav">
+                            &nbsp;
                         </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-@include('inc.messages')
-    <div class="main-content">
-        @yield('content')
-    </div>
 
-    <div class="container">
-        @include('widgets.footer')
+                       {{--  <div class="navbar-form navbar-left">
+                            <form id="custom-search-input" method="get" action="{{ url('/search') }}">
+                                <div class="input-group col-md-12">
+                                    <input type="text" class="form-control input-lg" name="s" placeholder="search..." />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info btn-lg" type="button">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div> --}}
+
+
+                        <!-- Right Side Of Navbar -->
+                        <ul class="nav navbar-nav navbar-right">
+                            {{-- @include('widgets.notifications') --}}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle parent" data-toggle="dropdown" role="button" aria-expanded="false">
+
+                                    @if(Auth::check())
+                                        <img src="{{ Auth::user()->getPhoto() }}" alt="" />
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    @else
+
+                                    @endif
+
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                
+                                     @if(Auth::check())
+                                        <li>
+                                            <a href="{{ url('/'.Auth::user()->username) }}">
+                                                <i class="fa fa-user"></i> My Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url('/settings') }}">
+                                                <i class="fa fa-cog"></i> Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                                 document.getElementById('logout-form').submit();">
+                                                <i class="fa fa-sign-out"></i> Logout
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
+                                        </li>
+                                    @else
+                                        
+                                    @endif
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        @include('inc.messages')
+        <div class="main-content">
+            @yield('content')
+        </div>
+
+        <div class="container">
+            @include('widgets.footer')
+        </div>
     </div>
-</div>
 <div class="loading-page">
     <img src="{{ asset('images/rolling.gif') }}" alt="">
 </div>
