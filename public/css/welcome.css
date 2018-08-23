@@ -123,13 +123,9 @@ nav .navbar-brand img{
 	background-image: -webkit-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(../images/image2.jpg);
 }
 
-.thumbnail{
-
-}
-
 .thumbnail .user-image{
-	width: 100%;
-    height: 200px;
+	width: 100% !important;
+    height: 200px !important;
     box-sizing: border-box;
 }
 
