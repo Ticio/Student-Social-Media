@@ -90,7 +90,7 @@
                                         <div class="thumbnail">
 
                                             @if($post->profile_path != "")
-                                                <img alt="image" class="user-image img-responsive" src="{{Storage::url("uploads/profile_photos/".$post->profile_path)}}">
+                                                <img alt="image" class="user-image img-responsive" src="{{Storage::url("uploads/profile_photos/".$user->profile_path)}}">
                                             @else
                                                 <img class="user-image img-responsive back-image0" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                             @endif
