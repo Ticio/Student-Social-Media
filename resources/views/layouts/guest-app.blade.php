@@ -81,7 +81,7 @@
           <div class="row">
 
             <div class="text-center">
-              <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
+              <p class="text-muted small mb-4 mb-lg-0">&copy; Supercools 2018. IP1 - All Rights Reserved.</p>
             </div>
       
           </div>
