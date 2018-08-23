@@ -80,7 +80,7 @@
         <div class="container">
           <div class="row">
 
-            <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <div class="text-center">
               <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
             </div>
       
