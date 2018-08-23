@@ -27,9 +27,6 @@ class FollowController extends Controller
 
     public function follow(Request $request){
 
-
-
-
         $response = array();
         $response['code'] = 400;
 
@@ -46,8 +43,6 @@ class FollowController extends Controller
 
 
         if ($following && $follower && ($following_user_id == Auth::id() || $follower_user_id == Auth::id())){
-
-
 
             $relation = UserFollowing::where('following_user_id', $following_user_id)->where('follower_user_id', $follower_user_id)->get()->first();
 
@@ -92,11 +87,7 @@ class FollowController extends Controller
         $type = $request->input('type');
         $id = $request->input('id');
 
-
-
         $following = UserFollowing::find($id);
-
-
 
         if ($following){
 
@@ -157,11 +148,8 @@ class FollowController extends Controller
 
     public function pending(Request $request){
 
-
         $user = Auth::user();
-
         $list = $user->follower()->where('allow', 0)->with('follower')->get();
-
 
         return view('followers_pending', compact('user', 'list'));
     }

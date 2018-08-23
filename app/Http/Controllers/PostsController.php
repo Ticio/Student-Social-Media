@@ -74,9 +74,6 @@ class PostsController extends Controller
 
         $posts = $posts->limit($limit)->orderBy('id', 'DESC')->get();
 
-
-
-
         if ($div_location == 'initialize'){
             $div_location = ['top', 'bottom'];
         }else{

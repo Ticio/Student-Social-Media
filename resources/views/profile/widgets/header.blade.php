@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="cover @if(!$user->getCover() || !$can_see){{ 'no-cover' }}@endif" style="@if($can_see) background-image: url('{{ $user->getCover() }}') @endif">
+        <div class="cover @if(!$user->getCover() || !$can_see){{ 'no-cover' }}@endif" style="height: 300px; @if($can_see) background-image: url('{{ $user->getCover() }}') @endif">
             @if($my_profile)
                 <div class="loading-cover">
                     <img src="{{ asset('images/rolling.gif') }}" alt="">

@@ -19,20 +19,14 @@ class SettingsController extends Controller
 
 
     public function index(){
-
-
+        
         if (Session::has('user')){
             $user = Session::get('user');
         }else{
             $user = Auth::user();
         }
 
-
-
-
         return view('settings', compact('user'));
-
-
     }
 
     public function update(Request $request){

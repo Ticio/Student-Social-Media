@@ -94,7 +94,7 @@
                 {{-- <div class="text-center text-danger"><h4>Comment with facebook</h4></div> --}}
 
 
-                <div class="fb-comments" data-href="{{ Request::url() }}" data-numposts="9"></div>
+                <div class="fb-comments" data-href="{{ Request::url() }}" data-numposts="10" style="width: 90%;"></div>
             @endif
 
         </div>

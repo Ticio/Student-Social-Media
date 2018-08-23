@@ -116,15 +116,33 @@
                                 <div class="col-sm-2 col-md-3">
                                     
                                     <div class="thumbnail">
-                                        <div class="back-image0">
+{{-- 
+                                        background-image: -webkit-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(https://ssl.gstatic.com/accounts/ui/avatar_2x.png);
+    background-image: -o-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(https://ssl.gstatic.com/accounts/ui/avatar_2x.png);
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(https://ssl.gstatic.com/accounts/ui/avatar_2x.png); --}}
+                                        
+                                         @if($post->profile_path != "")
+                                            <div class="back-image0" style=>
+                                                <img src="{{Storage::url($user->profile_path)}}" class="img-responsive" alt=""/>
+                                            </div>
+                                        @else
+                                            <div class="back-image0" style="background-image: -webkit-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(storage/uploads/profile_photos/{{$user->profile_path}}); background-image: -o-linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(storage/uploads/profile_photos/{{$user->profile_path}});background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.25)), url(storage/uploads/profile_photos/{{$user->profile_path}});">
+                                                <img src="{{Storage::url($user->profile_path)}}" class="img-responsive" alt=""/>
+                                            </div>
+                                        @endif
+                                        
+
+                                        <div class="back-image0" style=>
                                             <img src="{{Storage::url($user->profile_path)}}" class="img-responsive" alt=""/>
                                         </div>
+
                                         <div>
                                             <a id="cart" class=" btn" role="button">
                                             <span class="glyphicon glyphicon-user" aria-hidden="true">
                                             </span> {{ $user->name }}
                                           </a>
                                         </div>
+
                                     </div>
                                 </div>
                             @endforeach        
@@ -152,7 +170,7 @@
                     <div class="col-sm-1">
                         <div class="thumbnail">
                             @if($post->profile_path != "")
-                                <img alt="image" class="img-responsive user-photo" src="{{Storage::url($post->profile_path)}}">
+                                <img alt="image" class="img-responsive user-photo" src="{{Storage::url('uploads/profile_photos/'.$post->profile_path)}}">
                             @else
                                 <img alt="image" class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                             @endif
@@ -170,7 +188,7 @@
                                 <span class="text-muted">commented 
                                     {{ 
                                         $post->created_at
-                                      }}
+                                    }}
                                 </span>
 
                             </div>

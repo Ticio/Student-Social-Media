@@ -138,6 +138,7 @@ class User extends Authenticatable
     }
 
     public function suggestedPeople($limit = 5, $city_id = null, $hobby_id = null, $all = null){
+        
         $list = User::where('id', '!=', $this->id);
 
         if ($all == null) {
