@@ -88,9 +88,13 @@
                                     <div class="col-sm-2 col-md-3">
                                         
                                         <div class="thumbnail">
-                                            <div class="back-image0">
-                                                <img src="{{Storage::url($user->profile_path)}}" class="img-responsive" alt=""/>
-                                            </div>
+
+                                            @if($post->profile_path != "")
+                                                <img alt="image" class="user-image img-responsive" src="{{Storage::url("uploads/profile_photos/".$post->profile_path)}}">
+                                            @else
+                                                <img class="user-image img-responsive back-image0" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                                            @endif
+
                                             <div>
                                                 <a id="cart" class=" btn" role="button" href="{{ url('/'.$user->username)}}">
                                                 <span class="glyphicon glyphicon-user" aria-hidden="true">
