@@ -31,7 +31,6 @@ class SettingsController extends Controller
 
     public function update(Request $request){
 
-
         $additional_msg = false;
         if ($request->input("type") == "password") {
             $validator = Validator::make($request->all(), [
